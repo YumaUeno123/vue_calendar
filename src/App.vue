@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <full-calendar v-if="!getAllData" locale="en" @dayClick="dayModalToggle" @eventClick="eventModalToggle" /> -->
-    <full-calendar :events="getAllData" locale="en" @dayClick="dayModalToggle" @eventClick="eventModalToggle" />
+    <!-- <full-calendar v-if="!getAllData" @dayClick="dayModalToggle" @eventClick="eventModalToggle" /> -->
+    <full-calendar :events="getAllData" :firstDay="1" @dayClick="dayModalToggle" @eventClick="eventModalToggle" />
     <day-modal v-if="dayModalShow" @close="dayModalToggle" :day="day" :submit="handleSubmit"/>
     <event-modal v-if="eventModalShow" @close="eventModalToggle" :text="text"/>
   </div>
